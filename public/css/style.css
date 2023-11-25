@@ -1,31 +1,55 @@
 
 
 body{
-    box-sizing: border-box;
-    background-image: url('../img/planet-volumes-4IrVnSpwk48-unsplash.jpg');
-    height: 100vh;
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    box-sizing: border-box;   
     color: aliceblue;
-    padding: 2rem;
-   
-    
-    
+    font-family: 'Oswald', sans-serif;
 }
 main{
     box-sizing:content-box;
-    height: 100%;
+    height: 100vh;
     
 }
+/* slide */
+.horizontal{
+    
+    display: flex;
+    
 
+}
+.slide{
+    
+    width: 100vw;
+    height: 100Vh;
+    display: flex; 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+     
+}
+.slide-one{
+    
+    background-image: url('../img/planet-volumes-yTo1u-i1pVI-unsplash.jpg');
+    
+}
+.slide-two{
+    background-image: url('../img/planet-volumes-4IrVnSpwk48-unsplash.jpg');
+    
+}
+.slide-three{
+    background-image: url('../img/planet-volumes-CtqagQnX-nQ-unsplash.jpg');
+    
+}
+.slide-four{
+    background-image: url('../img/planet-volumes-awYEQyYdHVE-unsplash.jpg');
+   
+}
 
 /* titre */
 
 
 .container-title{
-    height: 100%;
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -35,11 +59,17 @@ main{
 .h1{
     font-size: 8rem;
     animation: slideRight  3.4s ease  both running ;
+    padding-left: 2rem;
+    text-shadow: -4px -3px 11px rgba(255, 255, 255, 0.41);
 }
 .p-description{
-    padding-top:2rem ;
     width: 30vw;
     animation: slideRight 3.3s ease forwards;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-top:2rem ;
+    text-shadow: -7px -6px 11px rgba(255, 255, 255, 0.41);
+    
 }
 
 /* nav */
@@ -47,28 +77,34 @@ main{
 .a-logo{
     color: aliceblue;
     font-size: 2.5rem;
-    animation: fusee 3s ease ;
-}
-header{
     
-    width: 95%;
+}
+nav{
+    
+    width: 100vw;
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    position: fixed;   
 
+}
+.a-logo i{
+    padding-left: 2rem;
+    padding-top: 2rem;
 }
 .div-burger-menu i{
     
     font-size: 2rem;
     display: flex;
     justify-content: flex-end;
+    padding-right: 2rem;
+    padding-top: 2rem;
     
     
     
 }
 
 .container-burger-menu{
-    background-color: rgba(248, 243, 243, 0.362);
+    background-color: rgba(255, 255, 255, 0.158);
     width: 40vh;
     text-align: center;
     padding: 2rem 0; 
@@ -101,20 +137,26 @@ header{
 
 @keyframes slideRight{
     0%{
-        transform: translateX(-800px);
+        transform: translateX(-50vw);
 
     }
     100%{
-        transform: translateX(0);
+        transform: translateX(0px);
     }
 
 }
 
-@keyframes fusee{
+@keyframes rocket{
     0%{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(4000%);
+        transform: translateX(100vw);
     }
+}
+.translate{
+    transform: translateX(100vw);
+}
+.takeoff{
+    animation: rocket 2s ease;
 }
