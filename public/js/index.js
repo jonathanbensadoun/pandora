@@ -13,14 +13,17 @@ const takeOff ={
     handleClickRocket: function(event){
         event.preventDefault();
         rocket = document.querySelector('.a-logo');
-        console.log(rocket);
-        rocket.classList.add('takeoff')
-        rocket.classlits.remove('takeoff')
+        // console.log(rocket);
+        if(rocket.classList.contains('takeoff')){
+            rocket.classList.remove('takeoff');            
+        }
+        rocket.classList.add('takeoff');
+                
     },
     init: function(){
         rocket = document.querySelector('.a-logo');
-        console.log(rocket);
-        rocket.addEventListener('click',this.handleClickRocket);
+        // console.log(rocket);
+        rocket.addEventListener('click',takeOff.handleClickRocket);
     }
 }
 const slide ={
