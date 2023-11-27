@@ -14,16 +14,20 @@ const takeOff ={
         event.preventDefault();
         rocket = document.querySelector('.a-logo');
         // console.log(rocket);
-        if(rocket.classList.contains('takeoff')){
-            rocket.classList.remove('takeoff');            
-        }
+        
         rocket.classList.add('takeoff');
-                
+
+                // possé un event en fin anamtion animationend
+    },
+    handleEndAnimation: function(event){
+        const divAnimated = event.target;
+        divAnimated.classList.remove('takeoff')
     },
     init: function(){
         rocket = document.querySelector('.a-logo');
         // console.log(rocket);
         rocket.addEventListener('click',takeOff.handleClickRocket);
+        rocket.addEventListener('animationend',takeOff.handleEndAnimation)
     }
 }
 const slide ={
